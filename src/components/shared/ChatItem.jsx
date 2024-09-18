@@ -3,6 +3,7 @@ import { Link } from "../styles/StyledComponents";
 import { Box, Stack, Typography } from "@mui/material";
 import AvatarCard from "./AvatarCard";
 import { motion } from "framer-motion";
+import { blueish } from "../../constants/color";
 
 const ChatItem = ({
   avatar = [],
@@ -31,8 +32,8 @@ const ChatItem = ({
           display: "flex",
           gap: "1rem",
           alignItems: "center",
-          backgroundColor: sameSender ? "black" : "unset",
-          color: sameSender ? "white" : "unset",
+          backgroundColor: sameSender ? "#b15ee0" : blueish,
+          color: sameSender ? "black" : "white",
           position: "relative",
           padding: "1rem",
         }}

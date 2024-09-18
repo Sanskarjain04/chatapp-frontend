@@ -26,6 +26,7 @@ import Title from "../shared/Title";
 import ChatList from "../specific/ChatList";
 import Profile from "../specific/Profile";
 import Header from "./Header";
+import { blueish } from "../../constants/color";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
@@ -136,7 +137,7 @@ const AppLayout = () => (WrappedComponent) => {
               />
             )}
           </Grid>
-          <Grid item xs={12} sm={8} md={5} lg={6} height={"100%"}>
+          <Grid item xs={12} sm={8} md={5} lg={6} width={"100%"} height={"100%"}>
             <WrappedComponent {...props} chatId={chatId} user={user} />
           </Grid>
 
@@ -148,7 +149,7 @@ const AppLayout = () => (WrappedComponent) => {
             sx={{
               display: { xs: "none", md: "block" },
               padding: "2rem",
-              bgcolor: "rgba(0,0,0,0.85)",
+              bgcolor: blueish,
             }}
           >
             <Profile user={user} />

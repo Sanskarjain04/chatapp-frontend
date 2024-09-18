@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React, { memo } from "react";
-import { lightBlue } from "../../constants/color";
+import { lightBlue, messageComponentColor } from "../../constants/color";
 import moment from "moment";
 import { fileFormat } from "../../lib/features";
 import RenderAttachment from "./RenderAttachment";
@@ -19,7 +19,7 @@ const MessageComponent = ({ message, user }) => {
       whileInView={{ opacity: 1, x: 0 }}
       style={{
         alignSelf: sameSender ? "flex-end" : "flex-start",
-        backgroundColor: "white",
+        backgroundColor: messageComponentColor,
         color: "black",
         borderRadius: "5px",
         padding: "0.5rem",
